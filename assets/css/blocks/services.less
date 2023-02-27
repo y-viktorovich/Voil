@@ -1,0 +1,72 @@
+// main: ../style.less
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.services__col {
+    width: 33.33333%;
+    padding: 4rem;
+
+    background-color: @white;
+    border-right: 2px solid #fafafa;
+    border-bottom: 2px solid #fafafa;
+
+    &:hover {
+        .services__item {
+            transform: translateY(-20px);
+        }
+
+        .services__icon {
+            opacity: 0;
+        }
+    }
+
+    @media @tablet-big {
+        width: 50%;
+    }
+
+    @media @tablet {
+        width: 100%;
+    }
+
+    @media @mobile {
+        padding: 3rem;
+    }
+
+    @media @mobile-sm {
+        padding: 2rem;
+    }
+}
+
+.services__item {
+    transition: transform .2s linear;
+}
+
+.services__icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2.5rem;
+
+    fill: rgba(@black, 0.6);
+
+    transition: opacity .2s linear;
+}
+
+.services__title {
+    font-size: 2rem;
+    color: @black;
+    font-weight: 700;
+    line-height: 1.4;
+
+    margin-bottom: 1.5rem;
+}
+
+.services__text {
+    font-size: 1.5rem;
+    color: @gray-light;
+}
+

@@ -1,0 +1,76 @@
+// main: ../style.less
+
+.intro-slider {
+    background: #000 url('../img/intro-slider/slide-1.jpg') no-repeat center /cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-item .slider-item {
+    display: none;
+}
+
+.intro-slider.slick-initialized .slider-item {
+    display: block;
+}
+
+.intro-slider.slick-initialized {
+    background: #000;
+}
+
+.slick-active .slider-img {
+    transform: scale(1);
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.2);
+    transition: transform 1.2s linear;
+}
+
+.slider__content {
+    padding-right: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-60%);
+    z-index: 2;
+
+    text-align: right;
+    color: rgba(#fff, 0.7);
+
+    opacity: 0;
+    transition: transform 1.2s linear, opacity .2s linear;
+}
+
+.slick-active .slider__content {
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: transform 1.2s linear, opacity 1.2s linear;
+}
+
+.slider__text {
+    font-size: 5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 3rem;
+
+
+    @media @tablet-big {
+        font-size: 4rem;
+    }
+
+    @media @tablet {
+        font-size: 3rem;
+    }
+}

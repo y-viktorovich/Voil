@@ -1,0 +1,36 @@
+// main: ../style.less
+
+.footer {
+    padding: 1rem 0;
+
+    background-color: #000;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+
+    @media @mobile {
+        flex-direction: column;
+
+        .logo-item {
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.footer__copyright {
+    padding-top: 1rem;
+    border-top: 0.5px solid @gray-light;
+
+    font-size: 1.6rem;
+    color: @gray-light;
+    text-align: right;
+}

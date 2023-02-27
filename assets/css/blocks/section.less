@@ -1,0 +1,40 @@
+// main: ../style.less
+
+.section {
+    padding: 10rem 0 6rem;
+
+    &--gray {
+        background-color: #fafafa;
+    }
+
+    &--bg {
+        background-image: url(../img/mission-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    @media @mobile {
+        padding: 7rem 0 3rem;
+    }
+}
+
+.section__title {
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.section__text {
+    font-size: 1.5rem;
+    color: @gray-light;
+}
+
+.section__content {
+    margin-bottom: 6rem;
+    text-align: left;
+}

@@ -1,0 +1,81 @@
+// compress: true
+
+@import "vars";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 1.6rem;
+    color: @gray-light;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &.no-scroll,
+    &.show-nav {
+        overflow: hidden;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Vendor
+=============================*/
+
+@import "vendor/slick";
+@import "vendor/aos";
+
+
+/* Blocks
+=============================*/
+
+@import "blocks/header";
+@import "blocks/container";
+@import "blocks/logo";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/intro-slider";
+@import "blocks/btn";
+@import "blocks/services";
+@import "blocks/section";
+@import "blocks/product";
+@import "blocks/product-slider";
+@import "blocks/benefits";
+@import "blocks/mission";
+@import "blocks/accordion";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-product";
+@import "blocks/burger";
+
+
+/* Helpers
+=============================*/
+
+@import "helpers";
+

@@ -1,0 +1,48 @@
+// main: ../style.less
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-item__icon,
+.logo-item__icon-footer {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+
+    transition: fill .5s linear;
+
+    fill: rgba(0, 0, 0, 0.6);
+}
+
+.logo-item__icon-footer {
+    fill: rgba(@white, 0.9);
+}
+
+.logo-item__text,
+.logo-item__text-footer {
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+
+    transition: color .5s linear;
+
+
+    & span {
+        color: rgba(@white, 0.6);
+        font-style: italic;
+        font-weight: 700;
+
+        transition: color .5s linear;
+
+        margin-right: -0.7rem;
+    }
+}
+
+.logo-item__text-footer {
+    color: rgba(@white, 0.9);
+}
+
+

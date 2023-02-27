@@ -1,0 +1,75 @@
+// main: ../style.less
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    @media @tablet {
+        width: 100%;
+        height: calc(100vh - 60px);
+        padding-top: 1rem;
+        flex-direction: column;
+        overflow: auto;
+
+        background-color: rgba(255, 255, 255,0.8);
+        background-size: cover;
+
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        transition: transform .2s linear;
+
+        transform: translateX(100%);
+
+        &.show {
+            transform: translateX(0);
+        }
+    }
+}
+
+.nav__link {
+    display: block;
+    margin-right: 3rem;
+
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: color .2s linear;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover.nav__link:after,
+    &.active.nav__link:after {
+        width: 100%;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0.2rem;
+
+        background-color: #000;
+        transition: width .2s linear;
+    }
+
+    @media @tablet {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        text-align: right;
+        margin-right: 0;
+    }
+}
+
+.footer__nav-link {
+    color: rgba(@white, 0.9);
+}

@@ -1,0 +1,58 @@
+// main: ../style.less
+
+.product-slider {
+    background: url("../img/ajax-loader.gif") center no-repeat;
+    height: 50px;
+
+    & .product-slider__item {
+        display: none;
+    }
+
+    &.slick-initialized {
+        background: none;
+        height: auto;
+
+        .product-slider__item {
+            display: block;
+        }
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        width: 10px;
+        height: 100%;
+        display: block;
+
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    &:before {
+        left: 0;
+        background-image: linear-gradient(to right, #fafafa, rgba(#fafafa, 0));
+    }
+
+    &:after {
+        right: 0;
+        background-image: linear-gradient(to left, #fafafa, rgba(#fafafa, 0));
+    }
+}
+
+.product-slider__item {
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+
+    & img {
+        display: block;
+        opacity: .8;
+        margin: 0 auto;
+
+        transition: opacity .3s linear;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
